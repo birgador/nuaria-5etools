@@ -23224,10 +23224,6 @@
 			"wis": 9,
 			"cha": 5,
 			"passive": 9,
-			"token": {
-				"name": "Pig",
-				"source": "SKT"
-			},
 			"fluff": {
 				"entries": [
 					"Pigs raised in a typical farm."
@@ -23257,6 +23253,10 @@
 				"grassland",
 				"urban"
 			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/tokens/farm_pig.webp?raw=true"
+			},
 			"damageTags": [
 				"P"
 			]
@@ -23296,13 +23296,9 @@
 			"wis": 9,
 			"cha": 5,
 			"passive": 9,
-			"token": {
-				"name": "Pig",
-				"source": "SKT"
-			},
 			"fluff": {
 				"entries": [
-					"Pigs raised in a typical farm."
+					"Pigs raised in a typical farm, but envigorated by Bestus fanatics."
 				],
 				"images": [
 					{
@@ -23349,6 +23345,10 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"tokenHref": {
+				"type": "external",
+				"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/tokens/vicious_farmn_pig.webp?raw=true"
+			},
 			"damageTags": [
 				"A",
 				"P"
