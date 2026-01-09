@@ -13200,28 +13200,13 @@
 			"actionTags": [
 				"Multiattack"
 			],
-			"miscTags": [
-				"MW"
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/gorund.webp?raw=true"
-						}
-					}
-				]
-			},
 			"damageTags": [
 				"I",
 				"P",
 				"S"
 			],
-			"savingThrowForced": [
-				"constitution",
-				"dexterity"
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -23187,174 +23172,6 @@
 			],
 			"savingThrowForced": [
 				"constitution"
-			]
-		},
-		{
-			"name": "Farm Pig",
-			"source": "BeastsofNuaria",
-			"page": 143,
-			"hp": {
-				"average": 5,
-				"formula": "1d8 + 1"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"cr": "0",
-			"traitTags": [],
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 11,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"str": 13,
-			"dex": 11,
-			"con": 12,
-			"int": 2,
-			"wis": 9,
-			"cha": 5,
-			"passive": 9,
-			"token": {
-				"name": "Pig",
-				"source": "SKT"
-			},
-			"fluff": {
-				"entries": [
-					"Pigs raised in a typical farm."
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/farm_pig.webp?raw=true"
-						}
-					}
-				]
-			},
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit +3} to hit, reach 5 ft., one creature. {@h}3 ({@damage 1d4 + 1}) piercing damage."
-					]
-				}
-			],
-			"miscTags": [
-				"MW"
-			],
-			"environment": [
-				"grassland",
-				"urban"
-			],
-			"damageTags": [
-				"P"
-			]
-		},
-		{
-			"name": "Vicious Farm Pig",
-			"source": "BeastsofNuaria",
-			"page": 143,
-			"hp": {
-				"formula": "10d8 + 30",
-				"average": 75
-			},
-			"speed": {
-				"walk": 30
-			},
-			"cr": "3",
-			"traitTags": [],
-			"size": [
-				"M"
-			],
-			"type": "beast",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"str": 17,
-			"dex": 11,
-			"con": 16,
-			"int": 2,
-			"wis": 9,
-			"cha": 5,
-			"passive": 9,
-			"token": {
-				"name": "Pig",
-				"source": "SKT"
-			},
-			"fluff": {
-				"entries": [
-					"Pigs raised in a typical farm."
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/farm_pig_vicious.webp?raw=true"
-						}
-					}
-				]
-			},
-			"environment": [
-				"grassland"
-			],
-			"save": {
-				"str": "+5"
-			},
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The vicious farm pig makes 2 Bite attacks."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) piercing damage, plus 3 ({@damage 1d6}) acid damage."
-					]
-				},
-				{
-					"name": "Acid Spray {@recharge 6}",
-					"entries": [
-						"The vicious farm pig spits acid in a line that is 15 feet long and 5 feet wide. Each creature in that line must make a {@dc 13} Dexterity saving throw, taking 10 ({@damage 3d6}) acid damage on a failed save, or half as much damage on a successful one."
-					]
-				}
-			],
-			"miscTags": [
-				"MW"
-			],
-			"immune": [
-				"acid"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"A",
-				"P"
-			],
-			"savingThrowForced": [
-				"dexterity"
 			]
 		}
 	],
