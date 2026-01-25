@@ -20,7 +20,8 @@
 					"birgador"
 				],
 				"convertedBy": [],
-				"color": "#2ea8b8"
+				"color": "000000",
+				"version": "1.0.0"
 			},
 			{
 				"json": "NuariaBelanorsBestiary",
@@ -23356,6 +23357,1108 @@
 			"savingThrowForced": [
 				"dexterity"
 			]
+		},
+		{
+			"name": "Thalasskarn (WIP)",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"source": "BeastsofNuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "23d8 + 46",
+				"average": 149
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 22,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "10",
+			"environment": [
+				"underwater"
+			],
+			"trait": [
+				{
+					"name": "Abyssal Momentum",
+					"entries": [
+						"While the thalasskarn moves at least 20 ft in a straight line while swimming, its next melee attack:",
+						"- Deals +Xd6 damage (scales with CR)",
+						"- Pushes or pulls the target up to 10 ft",
+						"- Does not provoke opportunity attacks"
+					]
+				},
+				{
+					"name": "Pressure-Born Physiology",
+					"entries": [
+						"Thalasskarn ignores movement penalties from:",
+						"Difficult terrain underwater",
+						"Strong currents",
+						"Nonmagical restraints like nets or kelp",
+						"Additionally, it has advantage on saves vs. being {@condition grappled} or {@condition restrained} underwater."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sudden Submerge",
+					"entries": [
+						"{@actTrigger} Thalasskarn is hit by a melee attack",
+						"Reaction: It moves up to half its swim speed without provoking opportunity attacks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Thalasskarn makes:",
+						"1 Bite",
+						"1 Claw",
+						"OR",
+						"2 Claws if it moved at least 20 ft this turn"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"fluff": {
+				"entries": [
+					"Thalasskarn, the Brine Howler",
+					"Classification: Abyssal Predator",
+					"Habitat: Coastal trenches, flooded caverns, kelp forests, sunken ruins",
+					"Temperament: Hyper-territorial, instinct-driven",
+					"Intelligence: Animal (non-sapient)",
+					"Lore & Natural History",
+					"Thalasskarn is believed to be an apex predator born of deep-sea pressures and ancient magic saturating the ocean floor. Sailors tell of it not as a singular beast, but as a kind—rare, solitary horrors that rise from the abyss when their hunting grounds are disturbed.",
+					"Its body is perfectly adapted to aquatic violence: smooth, muscular flesh reduces drag, while fin-spines along its back and limbs act as stabilizers when accelerating underwater. These spines can flare when threatened, making the creature appear larger and more dangerous to rivals.",
+					"The creature’s jaws are its most feared feature. Thalasskarn does not simply bite—it locks, using layered fangs to hold prey while powerful neck muscles thrash side to side. Victims are drowned, dismembered, or crushed against rock before being consumed. The constant stream of viscous saliva that drips from its mouth is not decay, but a biological lubricant that reduces water resistance during strikes and may contain paralytic toxins.",
+					"Behavior",
+					"Thalasskarn is not a hunter of opportunity. It establishes a hunting territory—often a reef, wreck, or flooded ruin—and patrols it relentlessly. Anything entering this domain is tested:",
+					"Large prey is ambushed from below or behind.",
+					"Small creatures are ignored unless they form schools large enough to agitate it.",
+					"Boats and swimmers may be attacked if vibrations or blood excite the beast.",
+					"It is especially aggressive during storms or tidal shifts, when prey is disoriented and sound carries farther through the water.",
+					"Despite its ferocity, Thalasskarn does not kill wastefully. Remains are often dragged back to lairs—cave systems or collapsed ruins—where bones and scavengers accumulate, creating eerie “reefs of death” that divers sometimes mistake for natural formations.",
+					"Ecological Role",
+					"Though terrifying, Thalasskarn plays a crucial role in deep-sea ecosystems. It culls oversized predators, prevents overpopulation of megafauna, and indirectly shapes underwater migration routes. Entire regions of the sea grow unnaturally calm or chaotic depending on whether a Brine Howler is present.",
+					"When one is slain, nearby waters often experience sudden ecological imbalance—shark swarms, invasive species, or aggressive kraken-spawn have been recorded in the aftermath.",
+					"Signs of Its Presence",
+					"Experienced sailors and coastal folk know the warnings:",
+					"Unnatural silence beneath the waves",
+					"Schools of fish fleeing shoreward",
+					"Shredded kelp drifting upward",
+					"Deep, resonant howls carried through water and hull alike",
+					"The sound—half roar, half pressure-born vibration—is what earned Thalasskarn its name. It is not a call, but a byproduct of its breath forcing through reinforced throat membranes, often just before an attack.",
+					"Legends & Superstitions",
+					"Some cultures believe Thalasskarn are guardians of drowned civilizations, drawn to ruins soaked in ancient magic.",
+					"Others claim they are failed divine beasts, shaped by gods and abandoned when they proved uncontrollable.",
+					"A common sailor’s belief holds that killing one invites worse horrors from the deep, as if the ocean resents losing such a weapon.",
+					"Fragments of its fin spines are prized by alchemists and artificers, said to retain pressure-magic even after death."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/thalasskarn.webp?raw=true"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Nudocuello Común",
+			"source": "BeastsofNuaria",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "4d8 + 8",
+				"average": 26
+			},
+			"speed": {
+				"walk": 35,
+				"burrow": 20
+			},
+			"str": 19,
+			"dex": 14,
+			"con": 14,
+			"int": 2,
+			"wis": 20,
+			"cha": 7,
+			"passive": 17,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Rastreador de Carroña",
+					"entries": [
+						"Ventaja en tiradas de Sabiduría (Percepción/Supervivencia) que dependan del olfato para localizar materia orgánica o criaturas heridas."
+					]
+				},
+				{
+					"name": "Preservación Enzimática",
+					"entries": [
+						"El Nudocuello puede almacenar un objeto u órgano de tamaño pequeño en su saco gular. Mientras esté dentro, el objeto no se descompone y es inmune al daño externo, pero el Nudocuello no puede usar su ataque de mordida con eficacia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}7 ({@damage 1d6 + 4}) damage."
+					]
+				},
+				{
+					"name": "Regurgitación {@recharge 5}",
+					"entries": [
+						"El Nudocuello expulsa bilis y restos de comida almacenados en un cono de 15ft. Las criaturas en el área deben superar una tirada de salvación de {@dc 12} Constitución o {@dice 2d6} y {@condition blinded} por un turno por el asco y el hedor."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"grassland",
+				"hill"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "http://34.170.176.34/audio/bestiary/giant-hyena.mp3"
+			},
+			"traitTags": [
+				"Rampage"
+			],
+			"fluff": {
+				"entries": [
+					"**NUDOCUELLO COMÚN**  ",
+					"*Carroñero de Largo Alcance*",
+					"---",
+					"**Clasificación:** Bestia  ",
+					"**Hábitat:** Cementerios antiguos, campos de batalla olvidados, gargantas profundas  ",
+					"**Actividad:** Crepuscular / Nocturna  ",
+					"**Temperamento:** Oportunista, cauteloso, feroz al defender a sus crías",
+					"---",
+					"### Descripción",
+					"El Nudocuello Común es un mamífero cuadrúpedo de aspecto inquietante. Su silueta recuerda a la de una hiena robusta, pero su anatomía mezcla un hocico alargado y flexible similar al de un oso hormiguero con la dentadura y postura de un cánido. El cuello, grueso y extensible, culmina en un prominente saco gular que le da nombre a la especie.",
+					"Su pelaje suele estar manchado y apelmazado por barro, sangre seca y restos orgánicos, lo que dificulta distinguirlo de la carroña que frecuenta.",
+					"---",
+					"### Ecología y Comportamiento",
+					"Animal eminentemente oportunista, el Nudocuello rara vez desperdicia energía. Prefiere desplazarse largas distancias siguiendo rastros invisibles para otras criaturas, guiado por un olfato extraordinariamente desarrollado.",
+					"Se desplaza solo o en pequeños grupos familiares. Aunque evita el conflicto directo, puede volverse sorprendentemente agresivo si detecta amenazas cerca de su madriguera.",
+					"---",
+					"### Olfato Sobrenatural",
+					"El Nudocuello posee quimiorreceptores altamente especializados que le permiten detectar:",
+					"- Carne muerta a varios kilómetros  ",
+					"- Heridas abiertas y procesos infecciosos  ",
+					"- El miedo de criaturas vivas, incluso a gran distancia  ",
+					"Muchos exploradores aseguran que el animal “huele la intención” antes de ver a su presa.",
+					"---",
+					"### Alimentación",
+					"**Dieta principal:** Carroña.",
+					"Prefiere cadáveres enterrados, restos parcialmente descompuestos o zonas donde la muerte es frecuente. Solo caza activamente cuando:",
+					"- La carroña escasea  ",
+					"- Detecta presas debilitadas o enfermas  ",
+					"- Necesita defender o alimentar a sus crías  ",
+					"En combate, ataca zonas ya dañadas del cuerpo, guiado por el olor de la sangre.",
+					"---",
+					"### Saco Gular y Almacenamiento",
+					"El rasgo más singular del Nudocuello es su saco gular, una cavidad extensible que segrega una enzima antibacteriana fría capaz de detener la descomposición. En él puede almacenar hasta **5 kg de carne y órganos sin digerir**, conservándolos durante días.",
+					"Este alimento puede ser regurgitado para:",
+					"- Alimentar a las crías  ",
+					"- Compartir con otros miembros del grupo  ",
+					"- Transportarlo hasta un nido lejano y seguro  ",
+					"---",
+					"### Reproducción",
+					"- **Ciclo reproductivo:** Lento  ",
+					"- **Crías:** 1–2 por camada  ",
+					"- **Cuidado parental:** Muy alto  ",
+					"Las crías dependen casi por completo de la comida regurgitada durante sus primeras etapas de vida, permaneciendo ocultas en madrigueras profundas.",
+					"---",
+					"### Rol Ecológico",
+					"El Nudocuello Común cumple una función vital como limpiador del ecosistema. Al consumir restos orgánicos y cadáveres, limita la propagación de plagas y enfermedades. Por ello, su presencia suele indicar zonas antiguamente marcadas por la muerte.",
+					"Muchos sabios advierten:  ",
+					"*Donde hay Nudocuellos, hubo tragedia… o pronto la habrá.*",
+					"---",
+					"### Supersticiones y Creencias Populares",
+					"En aldeas y asentamientos aislados, el Nudocuello Común es temido más allá de su verdadera naturaleza. Su extraordinaria capacidad para detectar enfermedades hace que, con inquietante frecuencia, sea visto merodeando cuando una persona cae gravemente enferma. Esto ha dado lugar a la creencia errónea de que **su presencia provoca la dolencia**, cuando en realidad el animal acude atraído por el olor de la infección y la muerte inminente.",
+					"En el imaginario popular se le considera un **augur de fallecimientos**. Se dice que “donde el Nudocuello espera, la tumba aún no está llena”. Esta fama se ve reforzada por su hábito de desenterrar cadáveres recientes o intentar arrastrar cuerpos recién fallecidos si no están bien protegidos. En algunos lugares se clavan estacas, campanas o amuletos olorosos en las tumbas nuevas para ahuyentarlos.",
+					"Estas supersticiones han provocado cacerías innecesarias y rituales de purificación, pese a que estudiosos y druidas coinciden en que el Nudocuello no trae la muerte: **simplemente la huele antes que nadie**."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/nudocuello_comun.webp?raw=true"
+						}
+					}
+				]
+			},
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"shortName": "Nudocuello",
+			"skill": {
+				"perception": "+7",
+				"stealth": "+4",
+				"survival": "+7"
+			},
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"isNamedCreature": true,
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			}
+		},
+		{
+			"name": "Nudocuello Feroz",
+			"source": "BeastsofNuaria",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 22,
+			"dex": 16,
+			"con": 14,
+			"int": 2,
+			"wis": 20,
+			"cha": 7,
+			"passive": 17,
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Rampage",
+					"entries": [
+						"When the nudocuello reduces a creature to 0 hit points with a melee attack on its turn, the nudocuello can take a bonus action to move up to half its speed and make a bite attack."
+					]
+				},
+				{
+					"name": "Rastreador de Carroña",
+					"entries": [
+						"Ventaja en tiradas de Sabiduría (Percepción/Supervivencia) que dependan del olfato para localizar materia orgánica o criaturas heridas."
+					]
+				},
+				{
+					"name": "Preservación Enzimática",
+					"entries": [
+						"El Nudocuello puede almacenar un objeto u órgano de tamaño pequeño en su saco gular. Mientras esté dentro, el objeto no se descompone y es inmune al daño externo, pero el Nudocuello no puede usar su ataque de mordida con eficacia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The nudocuello maks a bite and a slash attack."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}9 ({@damage 1d6 + 6}) damage."
+					]
+				},
+				{
+					"name": "Regurgitación {@recharge 5}",
+					"entries": [
+						"El Nudocuello expulsa bilis y restos de comida almacenados en un cono de 15ft. Las criaturas en el área deben superar una tirada de salvación de {@dc 13} Constitución o {@h}7 ({@damage 2d6}) y {@condition blinded} por un turno por el asco y el hedor."
+					]
+				},
+				{
+					"name": "Slash",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d6 + 6}) slashing damage."
+					]
+				}
+			],
+			"environment": [
+				"desert",
+				"grassland"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "http://34.170.176.34/audio/bestiary/giant-hyena.mp3"
+			},
+			"traitTags": [
+				"Rampage"
+			],
+			"fluff": {
+				"entries": [
+					"NUDOCUELLO FEROZ (Olfacta ferox)",
+					"Depredador de Acecho Persistente",
+					"Clasificación: Bestia",
+					"Hábitat: Bosques cerrados, estepas rocosas, ruinas habitadas, bordes de asentamientos aislados",
+					"Actividad: Nocturna / Crepuscular",
+					"Temperamento: Altamente agresivo, territorial, implacable",
+					"Descripción",
+					"El Nudocuello Feroz es una variante más peligrosa y dominante del nudocuello. De complexión ligeramente más corpulenta y musculosa, presenta extremidades delanteras más robustas y un tórax profundo que delata su potencia física. Su silueta recuerda a la de un gran cánido deformado, con la postura baja y tensa de un cazador al acecho.",
+					"El cuello, más grueso y menos flexible que el del nudocuello común, sostiene un saco gular reforzado por pliegues de piel densa. La cabeza es ancha, con mandíbulas poderosas y una dentadura diseñada para desgarrar carne viva más que para raspar huesos. Su pelaje es más corto y oscuro, a menudo marcado por cicatrices, sangre fresca y restos de presas recientes.",
+					"Ecología y Comportamiento",
+					"A diferencia de su pariente más oportunista, el Nudocuello Feroz es un depredador activo. Patrulla territorios extensos que defiende con violencia, expulsando o matando a competidores, incluidos otros nudocuellos.",
+					"Caza solo o en parejas estables. No evita el conflicto: lo busca si considera que una criatura viva representa alimento potencial o una amenaza. Es conocido por seguir a una presa durante horas, incluso días, desgastándola psicológica y físicamente antes del ataque final.",
+					"Olfato Sobrenatural",
+					"El olfato del Nudocuello Feroz no solo detecta la muerte, sino la vulnerabilidad inmediata. Es capaz de percibir:",
+					"Sudor de estrés y adrenalina",
+					"Sangre circulando cerca de la superficie de la piel",
+					"Fatiga muscular y miedo intenso",
+					"Enfermedades activas, incluso antes de que muestren síntomas visibles",
+					"Cazadores experimentados afirman que el Nudocuello Feroz elige a su presa antes de ser visto, y que huir solo confirma la elección.",
+					"Alimentación",
+					"Dieta principal: Carne fresca.",
+					"Aunque no desprecia la carroña, el Nudocuello Feroz prefiere cazar presas vivas. Ataca cuando:",
+					"Detecta debilidad, aislamiento o miedo",
+					"Defiende su territorio",
+					"Necesita entrenar a crías jóvenes",
+					"La presa entra en su radio de acecho",
+					"En combate, embiste con fuerza bruta, derriba y muerde zonas vitales (cuello, abdomen, muslos), provocando desangramiento rápido. No se retira fácilmente: una vez iniciado el ataque, suele terminarlo.",
+					"Saco Gular y Uso Predatorio",
+					"El saco gular del Nudocuello Feroz es menos eficiente para conservar carne a largo plazo, pero más resistente. Puede almacenar hasta 7 kg de carne fresca, lo que le permite:",
+					"Retirarse tras una caza exitosa sin cargar el cuerpo entero",
+					"Alimentarse mientras permanece oculto",
+					"Regurgitar alimento parcialmente procesado para las crías",
+					"La enzima que segrega es menos conservante, pero más agresiva, iniciando la digestión incluso antes de tragar.",
+					"Reproducción",
+					"Ciclo reproductivo: Muy lento",
+					"Crías: 1 por camada (rara vez 2)",
+					"Cuidado parental: Extremadamente alto y violento",
+					"Las madrigueras son defendidas con ferocidad absoluta. Se han documentado ataques a grupos armados completos que se acercaron demasiado a un nido. Las crías son entrenadas desde temprano para cazar, usando presas vivas debilitadas.",
+					"Rol Ecológico",
+					"El Nudocuello Feroz actúa como depredador regulador, eliminando a los individuos más débiles de otras especies. Su presencia reduce la sobrepoblación y mantiene el equilibrio… a costa de un alto riesgo para criaturas inteligentes.",
+					"Donde aparece, la fauna cambia su comportamiento.",
+					"Donde se establece, el miedo se vuelve permanente.",
+					"Supersticiones y Creencias Populares",
+					"En el folclore, el Nudocuello Feroz no es un augur, sino un verdugo. Se cree que sigue a ejércitos antes de las guerras y a caravanas condenadas. Algunos dicen que puede “marcar” a una persona y perseguirla durante noches enteras hasta que cae exhausta.",
+					"Existe un dicho común entre exploradores:",
+					"“Si el Nudocuello Feroz te huele, ya no te está buscando… te está esperando.”",
+					"Por este motivo, su caza es considerada una hazaña legendaria. Sin embargo, sabios y druidas advierten que eliminar a uno suele dejar un vacío ecológico peligroso: otros depredadores, o algo peor, ocuparán su lugar."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/nudocuello_feroz.webp?raw=true"
+						}
+					}
+				]
+			},
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"shortName": "Nudocuello",
+			"skill": {
+				"perception": "+7",
+				"stealth": "+5",
+				"survival": "+7"
+			},
+			"reaction": [
+				{
+					"name": "Scent-Driven Reposition",
+					"entries": [
+						"When a creature becomes {@condition frightened}, the Nudocuello shifts toward them without provoking and makes a bite attack."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"isNamedCreature": true,
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Nudocuello Vicioso",
+			"source": "BeastsofNuaria",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 26,
+			"dex": 18,
+			"con": 14,
+			"int": 2,
+			"wis": 20,
+			"cha": 7,
+			"passive": 18,
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Rampage",
+					"entries": [
+						"When the nudocuello reduces a creature to 0 hit points with a melee attack on its turn, the nudocuello can take a bonus action to move up to half its speed and make a bite attack."
+					]
+				},
+				{
+					"name": "Rastreador de Carroña",
+					"entries": [
+						"Ventaja en tiradas de Sabiduría (Percepción/Supervivencia) que dependan del olfato para localizar materia orgánica o criaturas heridas."
+					]
+				},
+				{
+					"name": "Preservación Enzimática",
+					"entries": [
+						"El Nudocuello puede almacenar un objeto u órgano de tamaño pequeño en su saco gular. Mientras esté dentro, el objeto no se descompone y es inmune al daño externo, pero el Nudocuello no puede usar su ataque de mordida con eficacia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}12 ({@damage 1d8 + 8}) piercing damage."
+					]
+				},
+				{
+					"name": "Regurgitación {@recharge 5}",
+					"entries": [
+						"El Nudocuello expulsa bilis y restos de comida almacenados en un cono de 15ft. Las criaturas en el área deben superar una tirada de salvación de {@dc 13} Constitución o {@h}7 ({@damage 2d6}) y {@condition blinded} por un turno por el asco y el hedor."
+					]
+				},
+				{
+					"name": "Slash",
+					"entries": [
+						"{@atk mw} {@hit 11} to hit, reach 10 ft., one target. {@h}17 ({@damage 2d8 + 8}) slashing damage."
+					]
+				}
+			],
+			"environment": [
+				"desert",
+				"grassland"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "http://34.170.176.34/audio/bestiary/giant-hyena.mp3"
+			},
+			"traitTags": [
+				"Rampage"
+			],
+			"fluff": {
+				"entries": [
+					"NUDOCUELLO FEROZ (Olfacta ferox)",
+					"Depredador de Acecho Persistente",
+					"Clasificación: Bestia",
+					"Hábitat: Bosques cerrados, estepas rocosas, ruinas habitadas, bordes de asentamientos aislados",
+					"Actividad: Nocturna / Crepuscular",
+					"Temperamento: Altamente agresivo, territorial, implacable",
+					"Descripción",
+					"El Nudocuello Feroz es una variante más peligrosa y dominante del nudocuello. De complexión ligeramente más corpulenta y musculosa, presenta extremidades delanteras más robustas y un tórax profundo que delata su potencia física. Su silueta recuerda a la de un gran cánido deformado, con la postura baja y tensa de un cazador al acecho.",
+					"El cuello, más grueso y menos flexible que el del nudocuello común, sostiene un saco gular reforzado por pliegues de piel densa. La cabeza es ancha, con mandíbulas poderosas y una dentadura diseñada para desgarrar carne viva más que para raspar huesos. Su pelaje es más corto y oscuro, a menudo marcado por cicatrices, sangre fresca y restos de presas recientes.",
+					"Ecología y Comportamiento",
+					"A diferencia de su pariente más oportunista, el Nudocuello Feroz es un depredador activo. Patrulla territorios extensos que defiende con violencia, expulsando o matando a competidores, incluidos otros nudocuellos.",
+					"Caza solo o en parejas estables. No evita el conflicto: lo busca si considera que una criatura viva representa alimento potencial o una amenaza. Es conocido por seguir a una presa durante horas, incluso días, desgastándola psicológica y físicamente antes del ataque final.",
+					"Olfato Sobrenatural",
+					"El olfato del Nudocuello Feroz no solo detecta la muerte, sino la vulnerabilidad inmediata. Es capaz de percibir:",
+					"Sudor de estrés y adrenalina",
+					"Sangre circulando cerca de la superficie de la piel",
+					"Fatiga muscular y miedo intenso",
+					"Enfermedades activas, incluso antes de que muestren síntomas visibles",
+					"Cazadores experimentados afirman que el Nudocuello Feroz elige a su presa antes de ser visto, y que huir solo confirma la elección.",
+					"Alimentación",
+					"Dieta principal: Carne fresca.",
+					"Aunque no desprecia la carroña, el Nudocuello Feroz prefiere cazar presas vivas. Ataca cuando:",
+					"Detecta debilidad, aislamiento o miedo",
+					"Defiende su territorio",
+					"Necesita entrenar a crías jóvenes",
+					"La presa entra en su radio de acecho",
+					"En combate, embiste con fuerza bruta, derriba y muerde zonas vitales (cuello, abdomen, muslos), provocando desangramiento rápido. No se retira fácilmente: una vez iniciado el ataque, suele terminarlo.",
+					"Saco Gular y Uso Predatorio",
+					"El saco gular del Nudocuello Feroz es menos eficiente para conservar carne a largo plazo, pero más resistente. Puede almacenar hasta 7 kg de carne fresca, lo que le permite:",
+					"Retirarse tras una caza exitosa sin cargar el cuerpo entero",
+					"Alimentarse mientras permanece oculto",
+					"Regurgitar alimento parcialmente procesado para las crías",
+					"La enzima que segrega es menos conservante, pero más agresiva, iniciando la digestión incluso antes de tragar.",
+					"Reproducción",
+					"Ciclo reproductivo: Muy lento",
+					"Crías: 1 por camada (rara vez 2)",
+					"Cuidado parental: Extremadamente alto y violento",
+					"Las madrigueras son defendidas con ferocidad absoluta. Se han documentado ataques a grupos armados completos que se acercaron demasiado a un nido. Las crías son entrenadas desde temprano para cazar, usando presas vivas debilitadas.",
+					"Rol Ecológico",
+					"El Nudocuello Feroz actúa como depredador regulador, eliminando a los individuos más débiles de otras especies. Su presencia reduce la sobrepoblación y mantiene el equilibrio… a costa de un alto riesgo para criaturas inteligentes.",
+					"Donde aparece, la fauna cambia su comportamiento.",
+					"Donde se establece, el miedo se vuelve permanente.",
+					"Supersticiones y Creencias Populares",
+					"En el folclore, el Nudocuello Feroz no es un augur, sino un verdugo. Se cree que sigue a ejércitos antes de las guerras y a caravanas condenadas. Algunos dicen que puede “marcar” a una persona y perseguirla durante noches enteras hasta que cae exhausta.",
+					"Existe un dicho común entre exploradores:",
+					"“Si el Nudocuello Feroz te huele, ya no te está buscando… te está esperando.”",
+					"Por este motivo, su caza es considerada una hazaña legendaria. Sin embargo, sabios y druidas advierten que eliminar a uno suele dejar un vacío ecológico peligroso: otros depredadores, o algo peor, ocuparán su lugar."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/nudocuello_mutated.webp?raw=true"
+						}
+					}
+				]
+			},
+			"immune": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"shortName": "Nudocuello",
+			"skill": {
+				"perception": "+8",
+				"stealth": "+7",
+				"survival": "+8"
+			},
+			"reaction": [
+				{
+					"name": "Scent-Driven Reposition",
+					"entries": [
+						"When a creature becomes {@condition frightened}, the Nudocuello shifts toward them without provoking and makes a bite attack."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"isNamedCreature": true,
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Clockwork Titan",
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"source": "NuariaToClassify",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				18
+			],
+			"hp": {
+				"formula": "13d12 + 52",
+				"average": 136
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 18,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"passive": 10,
+			"cr": "7",
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"trait": [
+				{
+					"name": "Engine Spin-Up",
+					"entries": [
+						"At the start of each of the Titan's turns, its internal gears spin faster, granting it a cumulative Overclock Charge. It can hold a maximum of 5 charges.",
+						"- For every Charge it possesses, the Titan gains a +2 bonus to all Attack Rolls and Damage Rolls.",
+						"- If the Titan reaches 5 Charges, it enters Critical Mass"
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"The Titan is immune to any spell or effect that would alter its form."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The Titan has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Critical Mass",
+					"entries": [
+						"If the Titan starts its turn with 5 Charges, it immediately unlocks the Catastrophic Discharge action, which it prioritizes above all else:"
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Titan makes two Pneumatic Slam attacks."
+					]
+				},
+				{
+					"name": "Pneumatic Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 10 ft., one target. {@h}14 ({@damage 2d8 + 5}) bludgeoning damage plus Overclock bonus."
+					]
+				},
+				{
+					"name": "Vent Steam {@recharge 5}",
+					"entries": [
+						"The Titan releases scalding steam in a 20-foot radius. Each creature in that area must make a {@dc 15} Constitution saving throw, taking 21 ({@damage 6d6}) fire damage on a failed save, or half as much on a successful one."
+					]
+				},
+				{
+					"name": "Catastrophic Discharge",
+					"entries": [
+						"The Titan overloads its core. Each creature within 60 feet of the Titan must make a {@dc 17} Dexterity saving throw, taking 55 ({@damage 10d10}) force damage on a failed save, or half as much on a successful one. The Titan takes 20 force damage as recoil. All Charges are reset to 0."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"AOE"
+			],
+			"legendary": [
+				{
+					"name": "Protocol: Accelerate",
+					"entries": [
+						"The Titan takes the Dash action."
+					]
+				},
+				{
+					"name": "Protocol: Strike",
+					"entries": [
+						"The Titan makes one Pneumatic Slam attack."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Volatile Earth-Scourge",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"source": "NuariaToClassify",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d10 + 48",
+				"average": 114
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 18,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"passive": 11,
+			"cr": "6",
+			"senses": [
+				"tremorsense 60 ft."
+			],
+			"senseTags": [
+				"T"
+			],
+			"trait": [
+				{
+					"name": "Sapper’s Trail",
+					"entries": [
+						"The Earth-Scourge continuously alters the map as it moves. The ground it moves across turns into difficult terrain as it churns the earth and leaves behind a viscous, hardening resin."
+					]
+				},
+				{
+					"name": "Tunneler",
+					"entries": [
+						"The Earth-Scourge can burrow through solid rock at half its burrowing speed and leaves a 10-foot-diameter tunnel in its wake."
+					]
+				}
+			],
+			"traitTags": [
+				"Tunneler"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Earth-Scourge makes one Bite attack and uses Deploy Resin-Mine."
+					]
+				},
+				{
+					"name": "Crystalline Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Deploy Resin-Mine {@recharge 4}",
+					"entries": [
+						"The Earth-Scourge hacks up a globule of unstable, glowing resin and spits it onto a point on the ground within 30 feet. The globule adheres to the surface and arms itself at the start of the Earth-Scourge's next turn.",
+						"- Trigger: If a creature moves within 5 feet of the armed globule, it explodes.",
+						"- Effect: Each creature in a 10-foot radius of the explosion must make a {@dc 15} Dexterity saving throw, taking 28 ({@damage 8d6}) fire damage on a failed save, or half as much on a successful one. The explosion creates a 10-foot radius crater that counts as difficult terrain."
+					]
+				},
+				{
+					"name": "Tremor-Trap",
+					"entries": [
+						"The Earth-Scourge slams its massive carapace into the ground, weakening the integrity of the floor in a 20-foot cone. The area looks stable, but the next time a Medium or larger creature enters that area, the floor collapses.",
+						"- Effect: The creature must succeed on a {@dc 15} Dexterity saving throw or fall into a 10-foot deep jagged pit, taking 10 ({@damage 3d6}) bludgeoning damage and falling {@condition prone}."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"AOE"
+			],
+			"reaction": [
+				{
+					"name": "Reactive Collapse",
+					"entries": [
+						"When the Earth-Scourge takes damage while burrowed or standing on natural ground, it can cause the ceiling or ground within 5 feet of it to crumble.",
+						"- Effect: The attacker (if within range) must succeed on a {@dc 14} Dexterity saving throw or be {@condition blinded} by dust and debris until the end of their next turn."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Grotto Lasher",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"source": "NuariaToClassify",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d10 + 27",
+				"average": 76
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 40
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 16,
+			"int": 2,
+			"wis": 12,
+			"cha": 4,
+			"passive": 11,
+			"cr": "4",
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 30 ft."
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"traitTags": [
+				"Ambusher"
+			],
+			"trait": [
+				{
+					"name": "Ambush Predator",
+					"entries": [
+						"The Lasher has advantage on stealth checks while clinging to a ceiling or wall."
+					]
+				},
+				{
+					"name": "Anchor Stance",
+					"entries": [
+						"The Lasher cannot be pulled or moved against its will while it is climbing or attached to a surface."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Lasher makes two attacks: one with its Adhesive Tendril and one with its Bite. It can only bite a creature that is within 5 feet of it."
+					]
+				},
+				{
+					"name": "Adhesive Tendril",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 40 ft., one target. {@h}9 ({@damage 1d10 + 4}) bludgeoning damage, and the target is Grappled (escape {@dc 14}) and Restrained. The Lasher can have only one creature {@condition grappled} by its tendril at a time."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d12 + 4}) piercing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"bonus": [
+				{
+					"name": "Reel and Retreat",
+					"entries": [
+						"he Lasher pulls a creature {@condition grappled} by its tendril up to 20 feet straight toward it. If the target ends this movement within 5 feet of the Lasher, the Lasher may immediately move up to half its speed without provoking opportunity attacks from the target."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P"
+			]
+		},
+		{
+			"name": "Zarpas (WIP)",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Bestus",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in hybrid form)"
+				},
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 13,
+			"cr": "5",
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"skill": {
+				"athletics": "+6",
+				"perception": "+3",
+				"survival": "+3",
+				"animal handling": "+6",
+				"acrobatics": "+3"
+			},
+			"save": {
+				"con": "+3",
+				"str": "+3"
+			},
+			"bonus": [
+				{
+					"name": "Shape-Shift",
+					"entries": [
+						"El Zarpas shape-shifts into a Large beast-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/zarpa.webp?raw=true"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/zarpa_transformed.webp?raw=true"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/zarpas_beast_form.webp?raw=true"
+						}
+					}
+				]
+			}
 		}
 	],
 	"legendaryGroup": [
