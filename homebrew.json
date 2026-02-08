@@ -22167,15 +22167,15 @@
 			],
 			"ac": [
 				{
-					"ac": 15,
+					"ac": 14,
 					"from": [
 						"natural armor"
 					]
 				}
 			],
 			"hp": {
-				"average": 95,
-				"formula": "10d12 + 30"
+				"formula": "10d12 + 30",
+				"average": 95
 			},
 			"speed": {
 				"walk": 50
@@ -22201,13 +22201,19 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}18 ({@damage 2d12 + 5}) piercing damage. If the target is a Medium or smaller creature, it is {@condition grappled} (escape {@dc 15}). Until this grapple ends, the target is {@condition restrained}, and the tyrannosaurus can't bite another target."
+						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}18 ({@damage 2d12 + 5}) piercing damage. If the target is a Medium or smaller creature, it is {@condition grappled} (escape {@dc 15}). Until this grapple ends, the target is {@condition restrained}, and the kaborreth can't bite another target."
 					]
 				},
 				{
-					"name": "Tail",
+					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 10 ft., one target. {@h}14 ({@damage 2d8 + 5}) bludgeoning damage."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) slashing damage."
+					]
+				},
+				{
+					"name": "Powerful Hit",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 1d12 + 5}) slashing damage.The target must succeed on a {@dc 15} Strength saving throw or be pushed 15 ft. away and become {@condition prone}."
 					]
 				}
 			],
@@ -22283,8 +22289,11 @@
 				"con": "+5"
 			},
 			"damageTags": [
-				"B",
-				"P"
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"strength"
 			]
 		},
 		{
@@ -24382,27 +24391,32 @@
 				"E"
 			],
 			"ac": [
-				10
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
 			],
 			"hp": {
-				"average": 4,
-				"formula": "1d8"
+				"formula": "18d8 + 72",
+				"average": 153
 			},
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": "(40 ft. in hybrid form)"
+					"condition": "(40 ft. in hybrid form, 50 ft. in beast form)"
 				},
 				"climb": 30
 			},
-			"str": 10,
-			"dex": 10,
-			"con": 10,
-			"int": 10,
-			"wis": 10,
+			"str": 20,
+			"dex": 12,
+			"con": 18,
+			"int": 9,
+			"wis": 14,
 			"cha": 10,
-			"passive": 13,
-			"cr": "5",
+			"passive": 15,
+			"cr": "6",
 			"senses": [
 				"blindsight 30 ft."
 			],
@@ -24416,21 +24430,28 @@
 				"C"
 			],
 			"skill": {
-				"athletics": "+6",
-				"perception": "+3",
-				"survival": "+3",
-				"animal handling": "+6",
-				"acrobatics": "+3"
+				"athletics": "+11",
+				"perception": "+5",
+				"survival": "+5",
+				"animal handling": "+8",
+				"acrobatics": "+4",
+				"nature": "+2"
 			},
 			"save": {
-				"con": "+3",
-				"str": "+3"
+				"con": "+7",
+				"str": "+8"
 			},
 			"bonus": [
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"El Zarpas shape-shifts into a Large beast-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+						"El Zarpas shape-shifts into a Large beast-humanoid hybrid or a his Large beast form, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+					]
+				},
+				{
+					"name": "Primal Roar {@recharge 6}",
+					"entries": [
+						"Zarpa emits a bone-chilling roar. Each creature within 20 feet must succeed on a {@dc 14} Wisdom saving throw or be Frightened until the end of its next turn."
 					]
 				}
 			],
@@ -24458,7 +24479,662 @@
 						}
 					}
 				]
+			},
+			"trait": [
+				{
+					"name": "Rejection of Manufacture",
+					"entries": [
+						"Zarpa has Resistance to bludgeoning, piercing, and slashing damage from manufactured weapons (swords, bolts, etc.). He does not have resistance against natural weapons (claws, bites) or unarmed strikes."
+					]
+				},
+				{
+					"name": "Unstoppable Zeal",
+					"entries": [
+						"Zarpa has advantage on saving throws from manufactured sources or that involve manufactured items."
+					]
+				},
+				{
+					"name": "Charge (Hybrid form only)",
+					"entries": [
+						"If Zarpas moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, tit can make a horn attack as a bonus action. If the target is a creature, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from manufactured weapons",
+					"cond": true
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Zarpa makes two attacks: one with his Bite and one with his Claws. In Humanoid form, he replaces both with Unarmed Strikes."
+					]
+				},
+				{
+					"name": "Bite (Hybrid or Beast Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"AOE"
+			],
+			"damageTagsLegendary": [
+				"Y"
+			],
+			"savingThrowForcedLegendary": [
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"mythic": [
+				{
+					"name": "Sapa",
+					"entries": [
+						"Sapa"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Zarpa moves up to his speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Primal Roar (Costs 2 Actions)",
+					"entries": [
+						"Zarpa emits a bone-chilling roar. Each creature within 20 feet must succeed on a {@dc 14} Wisdom saving throw or be Frightened until the end of its next turn."
+					]
+				},
+				{
+					"name": "Snap (Costs 3 Actions)",
+					"entries": [
+						"Zarpa makes one Claw or Unarmed Strike attack."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Zarpas can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. Zarpas regains spent legendary actions at the start of its turn."
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Canopy Stalker",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"source": "BeastsofNuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "0",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/canopy_stalker.webp?raw=true"
+						}
+					}
+				]
 			}
+		},
+		{
+			"name": "Root Cutter",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"source": "BeastsofNuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "0",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/root_cutter.webp?raw=true"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Young Myrthbûn (WIP)",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"source": "BeastsofNuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "6",
+			"fluff": {
+				"entries": [
+					"**MYRTHBÛN (Aves myrthbuni)**  ",
+					"*Soberano Celestial de los Vientos Antiguos*",
+					"---",
+					"**Clasificación:** Bestia Mítica / Entidad Sagrada  ",
+					"**Hábitat:** Cumbres montañosas sagradas, mesetas elevadas, regiones donde el cielo y la tierra parecen tocarse  ",
+					"**Actividad:** Diurna (aunque puede manifestarse en cualquier momento)  ",
+					"**Temperamento:** Majestuoso, distante, protector, implacable ante amenazas",
+					"---",
+					"### Descripción",
+					"El Myrthbûn es un ave colosal de proporciones casi dracónicas, cuya envergadura puede cubrir plazas enteras cuando extiende sus alas. Su silueta es esbelta y elegante, pero transmite un poder abrumador incluso en reposo.",
+					"Su plumaje está compuesto por largas plumas superpuestas de textura sedosa, que cambian sutilmente de tonalidad según la luz. Predominan los azules nocturnos y púrpuras reales cerca del cuerpo, difuminándose hacia plateados perlados y dorados suaves en las puntas de las alas. Algunas plumas emiten un resplandor tenue, similar a estrellas atrapadas en niebla.",
+					"Sus ojos, grandes y luminosos, presentan patrones arremolinados en su interior, como cielos en movimiento o constelaciones vivas. El pico es curvado y oscuro, con apariencia de obsidiana pulida, mientras que sus enormes garras poseen una fuerza capaz de triturar roca.",
+					"---",
+					"### Ecología y Comportamiento",
+					"El Myrthbûn no es una criatura común ni abundante. La mayoría de los registros históricos hablan de individuos solitarios que patrullan vastos territorios desde los cielos.",
+					"Aunque suele evitar interferir en los asuntos menores de las criaturas mortales, reacciona con rapidez ante desequilibrios graves en la naturaleza, invasiones de monstruos o profanación de lugares sagrados.",
+					"En tierra firme se desplaza con sorprendente agilidad, usando sus alas tanto para impulsarse como para golpear con una fuerza devastadora.",
+					"---",
+					"### Dominio del Aire y la Luz",
+					"El Myrthbûn posee un control innato sobre corrientes de viento y energías lumínicas sutiles. Entre sus habilidades se incluyen:",
+					"- Manipular vientos para elevarse sin esfuerzo o derribar enemigos  ",
+					"- Crear ráfagas cortantes capaces de partir árboles y rocas  ",
+					"- Envolver su cuerpo en un halo de luz que intimida y desorienta  ",
+					"- Convocar tormentas suaves que restauran la tierra en lugar de destruirla  ",
+					"Muchos sabios afirman que el clima responde a su presencia como si el mundo mismo le rindiera homenaje.",
+					"---",
+					"### Alimentación",
+					"**Dieta principal:** Energía vital del entorno y presas de gran tamaño.",
+					"Aunque puede cazar criaturas gigantescas, el Myrthbûn rara vez lo hace por necesidad. Se cree que obtiene gran parte de su sustento absorbiendo la energía natural del viento, la luz solar y las corrientes mágicas del mundo.",
+					"Solo se alimenta físicamente cuando:",
+					"- Debe eliminar una amenaza mayor  ",
+					"- Necesita recuperar fuerzas tras largos periodos de actividad  ",
+					"- Protege territorios sagrados  ",
+					"Sus presas suelen ser monstruos poderosos o bestias que alteran el equilibrio natural.",
+					"---",
+					"### Alas de Impacto y Combate Terrestre",
+					"A diferencia de muchas aves colosales, el Myrthbûn es extraordinariamente peligroso en tierra.",
+					"Sus alas pueden:",
+					"- Golpear como arietes vivientes  ",
+					"- Crear ondas de choque al impactar el suelo  ",
+					"- Desviar ataques físicos y mágicos  ",
+					"Sus garras son utilizadas con precisión quirúrgica, capaces de inmovilizar o aplastar enemigos de gran tamaño en segundos.",
+					"---",
+					"### Reproducción",
+					"- **Ciclo reproductivo:** Extremadamente raro (siglos entre nacimientos)  ",
+					"- **Crías:** 1 por ciclo  ",
+					"- **Cuidado parental:** Prolongado y ferozmente protector  ",
+					"Los nidos del Myrthbûn se encuentran en picos inaccesibles, formados por rocas pulidas por el viento y plumas endurecidas por energía mágica.",
+					"Las crías tardan décadas en alcanzar su tamaño completo y siglos en desarrollar su pleno poder.",
+					"---",
+					"### Rol Ecológico",
+					"El Myrthbûn es considerado un regulador supremo del equilibrio natural.",
+					"Su presencia mantiene a raya a criaturas excesivamente agresivas y evita que fuerzas corruptas se expandan por regiones enteras. Se dice que donde anida un Myrthbûn, la tierra florece y las tormentas se vuelven más suaves y predecibles.",
+					"Los antiguos textos lo describen como:",
+					"*El guardián que no gobierna, pero al que todo obedece.*",
+					"---",
+					"### Supersticiones y Creencias Populares",
+					"En muchas culturas, el Myrthbûn es venerado como un dios viviente o mensajero del cielo. Templos y estatuas suelen erigirse en lugares elevados, orientados hacia las rutas que se cree que la criatura recorre.",
+					"Algunas leyendas afirman que:",
+					"- Ver un Myrthbûn volar augura una era de prosperidad  ",
+					"- Escuchar su canto anuncia grandes cambios en el mundo  ",
+					"- Sus plumas caídas son reliquias sagradas de inmenso poder  ",
+					"Sin embargo, en regiones donde antiguas batallas fueron castigadas por su furia, se le teme como un juez implacable. Se dice que cuando el Myrthbûn desciende a tierra con las alas abiertas, ningún ejército puede resistir."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/Myrthb%C3%BBn.webp?raw=true"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Salvatore Islandio",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Nuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "18d8 + 36",
+				"average": 117
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 16,
+			"passive": 12,
+			"cr": "7",
+			"save": {
+				"cha": "+6",
+				"dex": "+7"
+			},
+			"skill": {
+				"insight": "+5",
+				"intimidation": "+6",
+				"athletics": "+5",
+				"persuasion": "+6"
+			},
+			"action": [
+				{
+					"name": "Arbalest with kurdurite bolts (6/Day)",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 80/300 ft., one target. {@h}23 ({@damage 2d6 + 16}) piercing damage."
+					]
+				},
+				{
+					"name": "Arbalest shot",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 80/300 ft., one target. {@h}13 ({@damage 2d6 + 6}) piercing damage."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Focus Fire {@recharge 5}",
+					"entries": [
+						"Salvatore points out a single creature he can see within 100 feet. Up to three allies within 60 feet of Salvatore who can see the target can use their Reaction to immediately make one ranged or melee weapon attack against that creature."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"MLW"
+			],
+			"fluff": {
+				"entries": [
+					"## Loot",
+					"- 5 kurdurite bolts, worth 5gp each",
+					"- wooden ring",
+					"- potion of superior healing"
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/salvatore_islandio.webp?raw=true"
+						}
+					}
+				]
+			},
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"reaction": [
+				{
+					"name": "Hold the Line",
+					"entries": [
+						"When an allied creature within 30 ft is hit by an attack, it gains a +2 AC against that attack."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Commanding shout",
+					"entries": [
+						"Choose up to 3 allied creatures within 60 ft who can hear him. Each creature may move up to half their speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Healing Potion (1/Day)",
+					"entries": [
+						"Drinks a potion of superior healing, recovering {@dice 8d4 + 8} hit points."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Tactical Discipline",
+					"entries": [
+						"Allies within 30 feet of Salvatore do not provoke opportunity attacks when they move out of an enemy's reach, provided they are moving toward a position that Salvatore can see."
+					]
+				},
+				{
+					"name": "Presencia de Comandante",
+					"entries": [
+						"While Salvatore is conscious and can see the battlefield, any allied Bandit within 60 feet of him gains a +2 bonus to attack rolls and cannot be {@status surprised}. Additionally, they can use Salvatore's Intelligence modifier (+3) instead of their own for Initiative rolls."
+					]
+				}
+			],
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Islandio's bodyguard (WIP)",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Nuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 16,
+					"condition": "when having the pavise"
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 10,
+			"wis": 12,
+			"cha": 9,
+			"passive": 11,
+			"cr": "3",
+			"reaction": [
+				{
+					"name": "Redirect Attack",
+					"entries": [
+						"When Salvatore Islandio is targeted by an attack and the bodyguard is within 5 feet of him, he can choose to swap places with Salvatore and the bodyguard becomes the target of the attack instead."
+					]
+				},
+				{
+					"name": "Yo te cubro",
+					"entries": [
+						"When a friendly creature within 5ft of the bodyguard must make a dexterity saving throw, the bodyguard can decide to cover the creature with their bodies. When doing this, the bodyguard automatically fails the saving throw and takes the double amount of damage it would have normally taken. ",
+						"The friendly creature does not make the saving throw."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The bodyguard makes three mace attacks or a mace attack and a shield bash attack."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Shield bash",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage. On a hit, a target creature must succeed on a {@dc 13} Strength saving throw or be pushed 10 ft. away on a straight and be knocked {@condition prone}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"trait": [
+				{
+					"name": "Interpose",
+					"entries": [
+						"While the bodyguard holds its pavise and is within 5 feet of an ally, that ally gains half cover (+2 to AC and Dex saving throws)."
+					]
+				},
+				{
+					"name": "Loyal protector",
+					"entries": [
+						"The bodyguard ignores difficult terrain when moving towards an ally they can see."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/islandios_bodyguard.webp?raw=true"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"B"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Islandio's warden (WIP)",
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"source": "Nuaria",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 16,
+					"condition": "when having the pavise"
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 10,
+			"wis": 12,
+			"cha": 9,
+			"passive": 11,
+			"cr": "3",
+			"reaction": [
+				{
+					"name": "Redirect Attack",
+					"entries": [
+						"When Salvatore Islandio is targeted by an attack and the bodyguard is within 5 feet of him, he can choose to swap places with Salvatore and the bodyguard becomes the target of the attack instead."
+					]
+				},
+				{
+					"name": "Yo te cubro",
+					"entries": [
+						"When a friendly creature within 5ft of the bodyguard must make a dexterity saving throw, the bodyguard can decide to cover the creature with their bodies. When doing this, the bodyguard automatically fails the saving throw and takes the double amount of damage it would have normally taken. ",
+						"The friendly creature does not make the saving throw."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The bodyguard makes three mace attacks or a mace attack and a shield bash attack."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Shield bash",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) bludgeoning damage. On a hit, a target creature must succeed on a {@dc 13} Strength saving throw or be pushed 10 ft. away on a straight and be knocked {@condition prone}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"trait": [
+				{
+					"name": "Interpose",
+					"entries": [
+						"While the bodyguard holds its pavise and is within 5 feet of an ally, that ally gains half cover (+2 to AC and Dex saving throws)."
+					]
+				},
+				{
+					"name": "Loyal protector",
+					"entries": [
+						"The bodyguard ignores difficult terrain when moving towards an ally they can see."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://github.com/birgador/nuaria-5etools/blob/master/img/creatures/islandios_warden.webp?raw=true"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"B"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
 		}
 	],
 	"legendaryGroup": [
