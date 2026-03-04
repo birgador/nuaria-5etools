@@ -1,2 +1,3 @@
 # Ignore backed up original images
 img/_originals_backup/
+**/.DS_Store
